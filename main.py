@@ -29,10 +29,10 @@ origins = [
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,      # list of allowed origins
-    allow_credentials=True,
-    allow_methods=["*"],        # allow all HTTP methods
-    allow_headers=["*"],        # allow all headers
+    allow_origins=["*"],        # ALLOW ALL ORIGINS
+    allow_credentials=False,    # MUST be False when allow_origins=["*"]
+    allow_methods=["*"],        # Allow all HTTP methods
+    allow_headers=["*"],        # Allow all headers
 )
 # =========================
 # 2. Chargement du modèle
